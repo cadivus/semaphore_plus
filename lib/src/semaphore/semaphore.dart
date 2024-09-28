@@ -66,4 +66,7 @@ abstract class Semaphore {
       completer.complete();
     }
   }
+
+  /// Get the count of running acquire calls that did not release yet.
+  int get queueLength => _currentCount;
 }
